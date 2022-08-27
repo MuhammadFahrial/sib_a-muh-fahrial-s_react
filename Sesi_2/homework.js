@@ -1,5 +1,6 @@
 const videoData = [
-    {   name: 'Miss Scarlet',
+    {   
+        name: 'Miss Scarlet',
         present: true,
         rooms: [
             {kitchen: false},
@@ -72,6 +73,28 @@ const videoData = [
     }
 ]
 
-let presentTrue = videoData.filter((videoData_) => videoData_.present == true)
-console.log(presentTrue.length)
-console.log(presentTrue)
+const flatenAndFilter = (suspect) => {
+        return _.reduce(
+            suspect.rooms,
+            (memo, room) => {
+            _.each(room, (value, key) => {
+            if (!value) memo.push(key);
+            });
+        return memo;
+        },
+        []
+    );
+};
+
+// const flattenedNewDevelopment = _.map(videoData, flatenAndFilter);
+// console.log(flattenedNewDevelopment)
+
+// let presentTrue = videoData.filter((videoData_) => videoData_.present)
+// console.log(presentTrue.length)
+// console.log(presentTrue)
+
+videoData.forEach(element=>{
+    if(element.rooms[0].kitchen==false && element.present==true){
+        console.log(element.name)
+    }
+})

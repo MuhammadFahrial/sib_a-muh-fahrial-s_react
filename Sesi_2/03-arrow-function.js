@@ -76,4 +76,4 @@ function Person4(){
         console.log(this.age)
     }, 1000)
 }
-const e = new Person4
+const e = new Person4()
