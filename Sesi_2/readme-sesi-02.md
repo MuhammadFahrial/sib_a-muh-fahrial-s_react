@@ -1,5 +1,6 @@
-Nama    : A Muh Fahrial S
+Nama : A Muh Fahrial S
 Program : React and React Native Basic
+Kode : RCTN-KS05-012
 
 Summary Live Session Sesi 2
 
@@ -11,9 +12,8 @@ this Keyword di javascript sedikit berbeda di bandingkan dengan bahasa pemrogram
 
 Beberapa mehthod functional programing pada javascript yaitu map, filter, reduce dll. adapun konsep higher order function dalam lingkup javascript yang merupakan konsep terpenting dalam functional programing.
 
-Filter merupakan salah satu fungsi dari modul Array. filter menerima sebuah parameter dalam bentuk fungsi dan akan mengembalikkan array baru dari hasil kalkulasi array yang lama. 
+Filter merupakan salah satu fungsi dari modul Array. filter menerima sebuah parameter dalam bentuk fungsi dan akan mengembalikkan array baru dari hasil kalkulasi array yang lama.
 
 Map juga merupakan salah satu fungsi dari modul Array. mirip dengan konsep filter tetapi Map tidak membuang element array, map melakukan transformasi terhadap elemen. jumlah yang di hasilkan tetaplah sama dengan jumlah element array asalnya
 
 Reduce juga merupakan salah satu fungsi dari modul Array. berbeda dengan konsep map dan filter, reduce mempunyai tugas yang lebih generik. Reduce bisa digunakan untuk operasi yang methodnya tidak bisa di temukan seperti menjumlahkan, mencari rata-rata dll
-
