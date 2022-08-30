@@ -2,7 +2,7 @@ const arrayOfWords = ['cucumber', 'tomatos', 'avocado']
 const complicatedArray = ['cucumber', 44, true]
 
 
-const makeAllCaps = (arrayOfWords, complicatedArray) => {
+const makeAllCaps = (arrayOfWords) => {
     return new Promise((resolve) => {
         resolve (arrayOfWords.map((upper) => {
             return upper.toUpperCase()
@@ -11,8 +11,8 @@ const makeAllCaps = (arrayOfWords, complicatedArray) => {
 }
 
 const sortWords = () => {
-    return new Promise((resolve,a) => {
-        resolve (makeAllCaps((arrayOfWords.sort())))
+    return new Promise((resolve) => {
+        resolve ((arrayOfWords.sort()))
     })
 }
 
