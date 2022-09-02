@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navigation {
+  @apply flex flex-row justify-between bg-gray-500 text-slate-400 py-3
+}
+
+.nav-item {
+  @apply flex gap-3 ml-5
+}
+
+.nav-login {
+  @apply flex flex-row mr-5
+}
+
+.navigation a {
+  @apply hover:font-bold hover:text-slate-50 px-2
+}
+
+.hero,
+.next-meetup,
+.members {
+  @apply flex bg-slate-300 p-5 gap-5
+}
+
+.btn {
+  @apply bg-gray-500 p-1 px-8 text-slate-50
+}
+
+.member-title,
+.past-title {
+  @apply flex justify-between items-center mx-3 my-2
+}
+
+.member-text {
+  @apply flex flex-col justify-center
+}

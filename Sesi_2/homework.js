@@ -73,18 +73,18 @@ const videoData = [
     }
 ]
 
-const flatenAndFilter = (suspect) => {
-        return _.reduce(
-            suspect.rooms,
-            (memo, room) => {
-            _.each(room, (value, key) => {
-            if (!value) memo.push(key);
-            });
-        return memo;
-        },
-        []
-    );
-};
+// const flatenAndFilter = (suspect) => {
+//         return _.reduce(
+//             suspect.rooms,
+//             (memo, room) => {
+//             _.each(room, (value, key) => {
+//             if (!value) memo.push(key);
+//             });
+//         return memo;
+//         },
+//         []
+//     );
+// };
 
 // const flattenedNewDevelopment = _.map(videoData, flatenAndFilter);
 // console.log(flattenedNewDevelopment)
@@ -93,8 +93,27 @@ const flatenAndFilter = (suspect) => {
 // console.log(presentTrue.length)
 // console.log(presentTrue)
 
-videoData.forEach(element=>{
-    if(element.rooms[0].kitchen==false && element.present==true){
-        console.log(element.name)
-    }
+const filteredData = videoData.filter((video) => {
+    return video.present
 })
+
+const dataFilter = filteredData.map(data => {
+    let name = data.name.toString()
+    let present = data.present.toString()
+    let rooms = data.rooms
+
+    let obj = {
+        nama: name,
+        present: present,
+        rooms: rooms
+    }
+    return obj
+})
+
+console.log(dataFilter)
+
+// videoData.forEach(element=>{
+//     if(element.rooms[0].kitchen==false && element.present==true){
+//         console.log(element.name)
+//     }
+// })
