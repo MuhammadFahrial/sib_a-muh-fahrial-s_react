@@ -30,4 +30,18 @@ masih berhubungan dengan alur data satu arah sebelumnya setiap kali terjadi peru
 
 Kalau di React tidak merender ulang DOM-nya langsung, yang kita render ulang adalah virtual DOM
 
-Virtual DOM hanyalah sebuah struktur data yang menyimpan informasi lengkap tentang
+Virtual DOM hanyalah sebuah struktur data yang menyimpan informasi lengkap tentang DOM. seperti blue print kalau kita mau membangun rumah atau ruangan. jadi setiap kali terjadi perubahan data dan harus mengubah DOM, React melakukan perubahan data harus mengubah DOM, React melakukan perubahan tersebut di virtualDOM terlebih dahulu yang sudah berubah dengan DOM yang sebenarnya. Jika ada yang berbeda, VirtualDOM akan mengubah DOM yang berubah saja, jadi tidak semuanya di ganti sehingga tidak seberat jika harus mengubah seluruh pohon DOM. Mengubah VirtualDOM jauh lebih ringan karena VirtualDOM sederhananya hanyalah struktur data atau kerangkanya saja jadi perubahan akan lebih cepat dan ringan.
+
+JSX dari awal merupakan bagian dari React. Banyak orang yang tadinya tertarik dengan React ketika melihat JSX banyak yang enggan dan akhirnya mengurungkan niat untuk mencoba React.
+
+JSX pada dasarnya adalah javascipt dengan tambahan fungsi. dengan JSX kita dapat menulis kode yang sangat mirip dengan HTML atau lebih tepatnya XML sehingga menjadi sebuah 'templating language' yang sangat powerful.
+
+ketika ada permintaan untuk memunculkan sebuah halaman melalui browser dan pengguna mengunjungi halaman tertentu atau dengan istilah yang lebih teknis, pengguna mengakses route tertentu dan route tersebut memanggil controller, yang kemudian akan merender halaman berdasarkan template yang berkaitan dengan controller dan route tersebut. proses render tersebut sederhananya adalah melakukan concat terhadap string dengan menambahkan data data yang di sertakan di route atau controller tersebut. proses append string template dengan data tersebut bukanlah operasi yang ringan apalagi ketika template sudah cukup kompleks dan besar ukurannya. setelah proses append string dan rendering selesai baru kemudian string yang sudah di tambahkan data tesebut di kirimkan kembali ke pengguna.
+
+sementara ketika kita menggunakan JSX, proses menjadi lebih simpel. framework tidak lagi perlu melakukan proses rendering dalam bentuk append string yang butuh tenaga komputasi cukup besar. framework tinggal menterjemahkan hasil dari JSX yang di transpalasi menjadi fungsi fungsi (bukan string) menjadi tag-tag html dan langsung mengirimkan hasilnya kembali ke pengguna.
+
+Node JS dan NPM merupakan platform yang di butuhkan untuk mengembangkan aplikasi React jenis apapun.
+
+Webpack di gunakan untuk module packanging development, serta memproduksi alut automation.
+
+Babel adalah kompiler javascipt dan transpiler yang di gunakan untuk mengubah satu source code ke source code yang lain. Babel mengkompilasi React JSX dan ES6 ke ES5 javascipt yang dapat di jalankan di semua browser.
