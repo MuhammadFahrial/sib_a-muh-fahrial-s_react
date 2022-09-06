@@ -1,9 +1,4 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Main from "./components/Main";
-import Card from "./components/Card";
-import Footer from "./components/Footer";
+import './App.css';
 
 /*// React tanpa JSX 
 return(
@@ -49,18 +44,18 @@ return (
 const App = () => {
   return (
     <>
-      {/* <nav className="navigation">
+      <nav className="navigation">
         <div className="nav-item">
           <a href="" className="">QTemu</a>
           <a href="" className="">Create Meetup</a>
           <a href="" className="">Explore</a>
         </div>        
         <div className="nav-login">
-          <a href="">Login</a>
+          {/* <a href="">Login</a> */}
         </div>
-      </nav> */}
+      </nav>
 
-      {/* <div className="hero m-3">
+      <div className="hero m-3">
         <div className="hero-image">
           <h1 className='bg-slate-400 w-36 h-36'></h1>
         </div>
@@ -70,10 +65,11 @@ const App = () => {
             <p className='mr-8'>Members <span className='pl-6'>1,078</span></p>
             <p className='mr-6'>Organizers <span className='pl-4'>Adhy Wiranata</span></p>
             <p className='mt-5'><a href="" className='btn'>Join Us</a></p>
+          
         </div>
-      </div> */}
+      </div>
 
-      {/* <h1 className='font-bold mx-3 my-2'>Next Meetup</h1>
+      <h1 className='font-bold mx-3 my-2'>Next Meetup</h1>
       <div className="next-meetup mx-9">
         <div className="text-content">
           <p>Awesome meetup and event</p>
@@ -106,9 +102,9 @@ const App = () => {
           <p>Organizers</p>
           <p>Adhy Wiranata <span className='pl-9'>4 others.</span></p>
         </div>
-      </div> */}
-
-      {/* <div className="past-title">
+      </div>
+      
+      <div className="past-title">
       <h1 className='font-bold'>Past Meetups</h1>
       <a href="" className='mr-6'>See all</a>
       </div>
@@ -133,10 +129,10 @@ const App = () => {
           <p className='pt-4'>110 <span className='text-sm py-3 text-slate-500'>went</span></p>
           <p className='pt-5'><a href="" className='btn'>View</a></p>
         </div>
-      </div> */}
-      {/* <p className='text-center border-black mt-14 py-8 border-t'>Copyright Hactiv8 2018</p> */}
+      </div>
+      <p className='text-center border-black mt-14 py-8 border-t'>Copyright Hactiv8 2018</p>
     </>
-  );
-};
+  )
+}
 
 export default App;
