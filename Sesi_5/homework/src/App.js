@@ -1,9 +1,8 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Main from "./components/Main";
-import Card from "./components/Card";
-import Footer from "./components/Footer";
+import Hero from "./components/organisms/hero/Hero";
+import Main from "./components/organisms/main/Main";
+import Card from "./components/organisms/card/Card";
+import Footer from "./components/organisms/footer/Footer";
+import Navbar from "./components/organisms/navbar/Navbar";
 
 /*// React tanpa JSX 
 return(
@@ -49,6 +48,11 @@ return (
 const App = () => {
   return (
     <>
+      <Navbar />
+      <Hero />
+      <Main />
+      <Card />
+      <Footer />
       {/* <nav className="navigation">
         <div className="nav-item">
           <a href="" className="">QTemu</a>

@@ -11,7 +11,7 @@
 }
 
 .nav-login {
-  @apply flex flex-row mr-5
+  @apply flex flex-row
 }
 
 .navigation a {

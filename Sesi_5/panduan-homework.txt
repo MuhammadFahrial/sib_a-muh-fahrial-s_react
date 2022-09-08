@@ -1,0 +1,2 @@
+Membagi setiap komponen pada homework dengan metode atomic design dengan tambahan props dan state
+untuk propsnya saya gunakan di beberapa component agar component yang di gunakan bisa kita ubah isi textnya seperti pada folder components/atoms/paragraf, heading, cards, title dan untuk state saya hanya membuatnya di folder components/atoms/button.
