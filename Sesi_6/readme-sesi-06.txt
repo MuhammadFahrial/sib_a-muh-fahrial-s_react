@@ -1,0 +1,11 @@
+Komponen functional yang bersifat stateless. Sesuai namanya, kita bisa mendefinisikan komponen dengan fungsi yang me-return JSX. Isinya mirip dengan method render yang kita buat saat mendefinisikan komponen react dengan class. Bedanya functional komponen ini sifatnya stateless. Artinya komponen yang dibuat dengan fungsi ini tidak menyimpan state. Dia hanya dapat menerima props. Komponen functional ini dapat digunakan untuk menampilkan data tanpa butuh banyak logika.
+
+Komponen class. Kita sudah menggunakan jenis komponen ini di chapter sebelumnya. Kita mendefinisikan komponen dengan sintaks class yang  meng-extend React.Component. Dengan sintaks class ini kita dapat membuat komponen yang kompleks dengan kemampuan akses ke state dan seluruh siklus hidup komponen dapat digunakan di tipe komponen ini.
+
+React.createClass. Mendeklarasikan komponen dengan createClass sudah jarang atau . tidak pernah digunakan lagi di React yang terbaru. Sebelum sintaks class ES6 tersedia, kita harus menggunakan method createClass ini untuk membuat komponen. Kita tidak akan menggunakan method createClass di course ini, hanya sekedar pengetahuan umum saja jikalau teman-teman melihat method ini digunakan, mungkin ketika melihat kode React versi terdahulu.
+
+Pada awal kemunculannya, React memiliki Class component ( yang merupakan Statefull component ), dan functional component ( yang merupakan Stateless component ). Namun, sejak React versi 16.8, Hooks mulai diperkenalkan. Hooks ini membuat functional component dapat memiliki kemampuan yang sama dengan Class component, yaitu bisa memiliki state dan lifecycle. Hooks yang dimaksud di sini adalah useState dan useEffect
+
+Hooks dapat diartikan sebagai hal yang “mengaitkan”. yang “dikaitkan” oleh hooks adalah beberapa fitur yang terdapat di Class component, untuk bisa digunakan di Functional component
+
+Dikarenakan Functional component akan terus dikembangkan karena alasan best practice, maka perlu ada fitur unggulan Class component yang bisa di implementasikan juga di Functional component
