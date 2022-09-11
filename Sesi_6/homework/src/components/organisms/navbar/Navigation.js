@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import { NavLink } from "react-router-dom";
 // import CreateMeetup from "../../atoms/link/CreateMeetup";
 // import Explore from "../../atoms/link/Explore";
@@ -6,8 +6,19 @@ import React from "react";
 // import Qtemu from "../../atoms/link/Qtemu";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
+  const [isredirect, setRedirect] = useState();
+  const location = useLocation();
+
+  useEffect(() => {
+    setRedirect(location.pathname);
+  }, [location]);
+
+  const isActive = isredirect === "/home" ? "active" : "";
+  const isActiveMeetup = isredirect === "/meetup" ? "active" : "";
+
   return (
     <>
       <Navbar collapseOnSelect variant="dark" bg="dark" expand="lg">
@@ -15,10 +26,14 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="container-fluid">
-              <Nav.Link as={Link} to="/" className="nav-link text-first">
+              <Nav.Link as={Link} to="/" className={isActive}>
                 <b>QTemu</b>
               </Nav.Link>
-              <Nav.Link as={Link} to="/create-meetup" className="nav-link">
+              <Nav.Link
+                as={Link}
+                to="/create-meetup"
+                className={isActiveMeetup}
+              >
                 Create Meetup
               </Nav.Link>
               <Nav.Link as={Link} to="/explore" className="nav-link">

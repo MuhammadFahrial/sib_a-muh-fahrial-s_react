@@ -3,7 +3,7 @@ import React from "react";
 const Date = (props) => {
   return (
     <>
-      <h1 className="font-bold font-bold border-b pb-2 border-black mb-2">
+      <h1 className="font-bold font-bold border-b pb-2 border-black mb-2 text-xl">
         {props.date}
       </h1>
     </>
