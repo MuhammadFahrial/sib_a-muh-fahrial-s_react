@@ -1,5 +1,6 @@
 import React from "react";
 import TableBody from "../Body/TableBody";
+import Footer from "../Footer/Footer";
 import TableHead from "../Head/TableHead";
 
 const Table = () => {
@@ -9,6 +10,7 @@ const Table = () => {
         <TableHead />
         <TableBody />
       </table>
+      <Footer />
     </>
   );
 };
