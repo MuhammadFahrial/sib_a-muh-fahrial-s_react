@@ -1,9 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { NavLink } from "react-router-dom";
-// import CreateMeetup from "../../atoms/link/CreateMeetup";
-// import Explore from "../../atoms/link/Explore";
-// import Login from "../../atoms/link/Login";
-// import Qtemu from "../../atoms/link/Qtemu";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
