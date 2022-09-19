@@ -49,16 +49,16 @@ function Header() {
               About
             </NavLink>
           </li>
-          <li className="pb-1 md:pb-0">
+          {/* <li className="pb-1 md:pb-0">
             <NavLink to="/experience" onClick={toggleClass}>
               Experience
             </NavLink>
-          </li>
-          <li className="pb-1 md:pb-0">
+          </li> */}
+          {/* <li className="pb-1 md:pb-0">
             <NavLink to="/skills" onClick={toggleClass}>
               Skills
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="/interest" onClick={toggleClass}>
               Interest

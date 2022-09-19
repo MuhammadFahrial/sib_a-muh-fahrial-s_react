@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 // import Work from "../Components/Work";
 import { personalDetails, workDetails, eduDetails } from "../Details";
 
@@ -12,6 +13,20 @@ function About() {
         <p className="text-content py-8 lg:max-w-3xl">
           {personalDetails.about}
         </p>
+
+        <Link
+          to="skills"
+          className="py-2 px-4 bg-slate-300 mr-4 rounded hover:bg-sky-300"
+        >
+          Skills
+        </Link>
+        <Link
+          to="experience"
+          className="py-2 px-4 bg-slate-300 mr-4 rounded hover:bg-sky-300"
+        >
+          Experience
+        </Link>
+        <Outlet />
       </section>
       {/* <section>
         <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
