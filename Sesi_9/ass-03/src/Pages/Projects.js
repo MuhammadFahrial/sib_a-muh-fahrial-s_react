@@ -4,7 +4,7 @@ import { projectDetails } from "../Details";
 
 function Projects() {
   return (
-    <main className="container mx-auto max-width pt-10 mb-20">
+    <main className="container mt-8">
       <section>
         <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
           Projects
@@ -12,7 +12,14 @@ function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10">
           {React.Children.toArray(
             projectDetails.map(
-              ({ title, image, description, techstack, previewLink, githubLink }) => (
+              ({
+                title,
+                image,
+                description,
+                techstack,
+                previewLink,
+                githubLink,
+              }) => (
                 <Project
                   title={title}
                   image={image}

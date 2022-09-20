@@ -26,6 +26,12 @@ function About() {
         >
           Experience
         </Link>
+        <Link
+          to="projects"
+          className="py-2 px-4 bg-slate-300 mr-4 rounded hover:bg-sky-300"
+        >
+          Projects
+        </Link>
         <Outlet />
       </section>
       {/* <section>
