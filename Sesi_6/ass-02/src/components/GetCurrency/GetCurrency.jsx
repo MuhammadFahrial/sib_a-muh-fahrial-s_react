@@ -7,7 +7,7 @@ const GetCurrency = () => {
     const getData = async () => {
       try {
         const request = await fetch(
-          "https://api.currencyfreaks.com/latest?apikey=a17ba626be574d47b33d00aed3a310ff&symbols=CAD,EUR,IDR,JPY,CHF,GBP"
+          "https://api.currencyfreaks.com/latest?apikey=dbf31dffb68643b09d27126cc6f47ad6&symbols=CAD,EUR,IDR,JPY,CHF,GBP"
         );
 
         const response = await request.json();
