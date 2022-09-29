@@ -33,7 +33,6 @@ export const authLoginApi = createAsyncThunk(
   }
 );
 
-
 // Tambahkan builder.addcase, untuk case pending, fulfilled dan rejected.
 const authSlice = createSlice({
   name: "auth",
@@ -43,6 +42,8 @@ const authSlice = createSlice({
     builder
       .addCase(authLoginApi.pending, (state) => {
         state.isLoginPending = true;
+        state.isLoginSuccess = false;
+        state.errorMessage = "";
       })
       .addCase(authLoginApi.fulfilled, (state, action) => {
         console.log("fulfilled");
@@ -51,6 +52,7 @@ const authSlice = createSlice({
         state.isLoginPending = false;
         state.isLoginSuccess = true;
         state.user = { email };
+        state.errorMessage = "";
       })
       .addCase(authLoginApi.rejected, (state, action) => {
         console.log(action, "rejected");
