@@ -15,7 +15,7 @@ const Users = () => {
   }, []);
 
   return (
-    <div className="ml-4">
+    <div className="m-10">
       <div className="mb-4 mt-6">
         <Link
           to="/"
@@ -25,28 +25,30 @@ const Users = () => {
           Back to Home
         </Link>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <td className="bg-black/60 text-white">ID</td>
-            <td className="bg-black/60 text-white">Name</td>
-            <td className="bg-black/60 text-white">Username</td>
-            <td className="bg-black/60 text-white">Email</td>
-          </tr>
-        </thead>
-        <tbody className="border-solid">
-          {post.map((p, index) => {
-            return (
-              <tr key={index}>
-                <td>{p.id}</td>
-                <td>{p.name}</td>
-                <td>{p.username}</td>
-                <td>{p.email}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className="overflow-x-auto relative">
+        <table className="w-1/2 text-sm text-left text-gray-500">
+          <thead className="text-xs text-black uppercase bg-gray-50 ">
+            <tr>
+              <th className="py-3">ID</th>
+              <th className="py-3">Name</th>
+              <th className="py-3">Username</th>
+              <th className="py-3">Email</th>
+            </tr>
+          </thead>
+          <tbody className="border-solid">
+            {post.map((p, index) => {
+              return (
+                <tr key={index} className="bg-white border-b text-black">
+                  <td>{p.id}</td>
+                  <td>{p.name}</td>
+                  <td>{p.username}</td>
+                  <td>{p.email}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

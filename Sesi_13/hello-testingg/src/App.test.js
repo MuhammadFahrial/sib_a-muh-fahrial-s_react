@@ -11,7 +11,7 @@ test("Render halaman home dengan benar", () => {
   );
 
   // mencari text tertentu
-  const title = screen.getByText(/why do we need test ?/i);
+  const title = screen.getByText(/Why Do We Need Test ?/i);
   expect(title).toBeInTheDocument();
 
   // mencari button tertentu
