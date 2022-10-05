@@ -26,23 +26,23 @@ const Users = () => {
         </Link>
       </div>
       <div className="overflow-x-auto relative">
-        <table className="w-1/2 text-sm text-left text-gray-500">
-          <thead className="text-xs text-black uppercase bg-gray-50 ">
+        <table className="text-sm text-left text-gray-500">
+          <thead className="text-xs text-white uppercase bg-blue-500">
             <tr>
-              <th className="py-3">ID</th>
-              <th className="py-3">Name</th>
-              <th className="py-3">Username</th>
-              <th className="py-3">Email</th>
+              <th className="py-2 pr-6">ID</th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
             </tr>
           </thead>
-          <tbody className="border-solid">
+          <tbody>
             {post.map((p, index) => {
               return (
-                <tr key={index} className="bg-white border-b text-black">
-                  <td>{p.id}</td>
-                  <td>{p.name}</td>
-                  <td>{p.username}</td>
-                  <td>{p.email}</td>
+                <tr key={index} className="border-b text-black">
+                  <td className="py-2">{p.id}</td>
+                  <td className="py-2 pr-6">{p.name}</td>
+                  <td className="py-2 pr-6">{p.username}</td>
+                  <td className="py-2 pr-6">{p.email}</td>
                 </tr>
               );
             })}
