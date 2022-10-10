@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { authLoginApi } from "../../features/auth/authSlice";
+import reactImgLogin from "../../assets/rafiki.svg";
 import toast, { Toaster } from "react-hot-toast";
+import Button from "../atoms/Button";
+import InputEmail from "../atoms/InputEmail";
+import InputPassword from "../atoms/InputPassword";
 
 function LoginForm() {
   const authState = useSelector((state) => state.auth);
@@ -27,54 +31,51 @@ function LoginForm() {
 
   return (
     <>
-      <h1 className="my-3 font-bold text-center">Login Form</h1>
-      <hr />
-      <form name="loginForm" onSubmit={doSubmit}>
-        <div className="flex flex-col xl:mx-96 sm:mx-16">
-          <div className="mb-2 mt-4">
-            <input
-              type="email"
-              name="email"
-              onChange={emailChange}
-              value={email}
-              placeholder="Email"
-              className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            />
+      <div className="w-screen h-screen flex justify-center">
+        <div className="flex flex-row justify-center items-center">
+          <div>
+            <img src={reactImgLogin} alt="as" className="w-96 " />
           </div>
+          <div>
+            <h1 className="py-2 text-center bg-black/60 text-white text-sm rounded">
+              Login
+            </h1>
+            <form name="loginForm" onSubmit={doSubmit}>
+              <div className="flex flex-col ">
+                <div className="mb-2 mt-4">
+                  <InputEmail onChange={emailChange} email={email} />
+                </div>
 
-          <div className="mb-2">
-            <input
-              type="password"
-              name="password"
-              onChange={passwordChange}
-              value={password}
-              placeholder="Password"
-              className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            />
-          </div>
-          <div className="mb-4 text-right">
-            <input
-              type="submit"
-              value="Login"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            />
-          </div>
-          <div className="text-right">
-            {authState.isLoginPending && (
-              <div>
-                <img
-                  src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif"
-                  alt="Loading..."
-                />
+                <div className="mb-2">
+                  <InputPassword
+                    onChange={passwordChange}
+                    password={password}
+                  />
+                </div>
+                <div className="mb-4 text-right">
+                  <Button />
+                </div>
+                <div className="text-right">
+                  {authState.isLoginPending && (
+                    <div>
+                      <img
+                        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif"
+                        alt="Loading..."
+                      />
+                    </div>
+                  )}
+
+                  {authState.isLoginSuccess && <div>Success.</div>}
+
+                  {authState.errorMessage && (
+                    <div>{authState.errorMessage}</div>
+                  )}
+                </div>
               </div>
-            )}
-
-            {authState.isLoginSuccess && <div>Success.</div>}
-
-            {authState.errorMessage && <div>{authState.errorMessage}</div>}
+            </form>
           </div>
         </div>
-      </form>
+      </div>
     </>
   );
 }
